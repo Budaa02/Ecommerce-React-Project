@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.track {
+  display:flex;
+  justify-content: space-between;
+
+}
+.track_append {
+  display:flex;
+
+}
