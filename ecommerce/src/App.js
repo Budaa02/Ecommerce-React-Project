@@ -10,15 +10,15 @@ function App() {
     <div className="App">
       <OurStore/>
       <div className="menu ">
-        <MainMenu />
-      </div>
-      <div>
         <Search/>
       </div>
+      <div>
+       <MainMenu /> 
+      </div>
 
 
-      <h1>React Bootstrap Component</h1>
-      <Button variant="primary">Primary</Button>
+      {/* <h1>React Bootstrap Component</h1>
+      <Button variant="primary">Primary</Button> */}
     </div>
   );
 }
