@@ -93,3 +93,28 @@
   padding: 0px;
   height: 70px;
 }
+
+.container-banner .alice-carousel__dots {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+}
+.caroContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+.caroContainer img {
+  height: 350px;
+}
+.caroCard img {
+  height: 100px;
+}
+.caroCard {
+  display:flex;
+}
+.cardSlider {
+  display:flex;
+  width:500px;
+}
