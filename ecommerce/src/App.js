@@ -7,6 +7,11 @@ import Search from "./components/search";
 import slider from "./data/slidercard"
 import carouselData from "./data/slider";
 import AliceCarousel from "react-alice-carousel";
+import Popular from "./components/Popular";
+import CardSlider from "./data/card";
+import { Children } from "react";
+import Cards from "./components/sliderCard";
+import Background from "./components/background";
 
 function App() {
   const crouselData1 = carouselData.map((data) => {
@@ -30,25 +35,41 @@ function App() {
     console.log(product)
     return (
       <div className="container d-flex justify-content-around caroCard">
-          <div className="cardSlider card align-items-center justify-content-between w-80 p-4 m-0">
+        <div className="cardSlider card align-items-center justify-content-between w-80 p-4 m-0">
 
-              <div className="d-flex">
-                  <img src={product.url} className={product.style} id="sliders2-img" />
-                  <p>{product.price}</p>
-              </div>
-              <div className="">
-                  <p>{product.name}</p>
-                  <p>{product.item}</p>
-              </div>
-
+          <div className="d-flex">
+            <img src={product.url} className={product.style} id="sliders2-img" />
+            <p>{product.price}</p>
+          </div>
+          <div className="">
+            <p>{product.name}</p>
+            <p>{product.item}</p>
           </div>
 
+        </div>
+
       </div>
-  )
+    )
   })
+  // const CardList = CardSlider.map((el) => {
+
+  // })
+  // const ListItems = CardSlider.map(list => {
+  //   const children = list.children.map(el => {
+  //     return (
+  //       <div>
+  //         <img src={el.img}></img>
+  //       </div>
+  //     )
+  //   })
+  // })
+
+
 
   return (
+
     <div className="App">
+
       <OurStore />
       <div className="menu ">
         <Search />
@@ -68,7 +89,7 @@ function App() {
         </AliceCarousel>
       </div>
       <div>
-      <AliceCarousel className="container "
+        <AliceCarousel className="container "
           responsive={{
             0: {
               items: 3
@@ -83,6 +104,17 @@ function App() {
           {sliders}
         </AliceCarousel>
       </div>
+      <div>
+        <Popular />
+      </div>
+      <div className="">
+         <Cards></Cards>
+      </div>
+      <div>
+        <Background />
+      </div>
+     
+
 
       {/* <h1>React Bootstrap Component</h1>
       <Button variant="primary">Primary</Button> */}
