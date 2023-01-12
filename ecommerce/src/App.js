@@ -13,6 +13,8 @@ import { Children } from "react";
 import Cards from "./components/sliderCard";
 import Background from "./components/background";
 import ThreeCards from "./components/ThreeList"
+import FreeDelivery from "./components/delivery"
+import UserCardData1 from "./components/userCard"
 
 function App() {
   const crouselData1 = carouselData.map((data) => {
@@ -89,7 +91,7 @@ function App() {
           {crouselData1}
         </AliceCarousel>
       </div>
-      <div>
+      <div className="container">
         <AliceCarousel className="container "
           responsive={{
             0: {
@@ -105,7 +107,7 @@ function App() {
           {sliders}
         </AliceCarousel>
       </div>
-      <div>
+      <div className="container">
         <Popular />
       </div>
       <div className="">
@@ -114,8 +116,14 @@ function App() {
       <div>
         <Background />
       </div>
-      <div>
+      <div className="container">
         <ThreeCards/>
+      </div>
+      <div className="container bg-secondary">
+        <FreeDelivery/>
+      </div>
+      <div className="container">
+      <UserCardData1/>
       </div>
 
 

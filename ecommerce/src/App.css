@@ -131,3 +131,10 @@
   text-align: center;
   margin:10px; 
 }
+.rCard img {
+  height: 230px;
+  align-items: center;
+}
+.mainCards {
+  justify-content: center;
+}
