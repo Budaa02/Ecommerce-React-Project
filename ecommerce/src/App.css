@@ -116,5 +116,18 @@
 }
 .cardSlider {
   display:flex;
-  width:500px;
+  width:400px;
+}
+.background_footer {
+  /* background: url(images/SaleLaptop.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width:100%;
+
+}
+.background-middle {
+  padding: 50px;
+  text-align: center;
+  margin:10px; 
 }
