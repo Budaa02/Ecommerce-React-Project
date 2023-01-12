@@ -12,6 +12,7 @@ import CardSlider from "./data/card";
 import { Children } from "react";
 import Cards from "./components/sliderCard";
 import Background from "./components/background";
+import ThreeCards from "./components/ThreeList"
 
 function App() {
   const crouselData1 = carouselData.map((data) => {
@@ -108,12 +109,15 @@ function App() {
         <Popular />
       </div>
       <div className="">
-         <Cards></Cards>
+        <Cards></Cards>
       </div>
       <div>
         <Background />
       </div>
-     
+      <div>
+        <ThreeCards/>
+      </div>
+
 
 
       {/* <h1>React Bootstrap Component</h1>

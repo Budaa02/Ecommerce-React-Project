@@ -44,7 +44,10 @@ function Cards() {
     })
     return (
         <div>
-            <AliceCarousel className="container d">
+            <AliceCarousel
+             disableButtonsControls
+            className="container d"
+            >
                 {ListItems}
             </AliceCarousel>
 
