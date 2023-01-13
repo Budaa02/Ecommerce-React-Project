@@ -15,7 +15,8 @@ import Background from "./components/background";
 import ThreeCards from "./components/ThreeList"
 import FreeDelivery from "./components/delivery"
 import UserCardData1 from "./components/userCard"
-
+import LogoPng from "./components/footerLogo";
+import LatestNews from "./components/latestNews";
 function App() {
   const crouselData1 = carouselData.map((data) => {
     console.log(data);
@@ -124,6 +125,12 @@ function App() {
       </div>
       <div className="container">
       <UserCardData1/>
+      </div>
+      <div className="container bg-secondary">
+          <LogoPng/>
+      </div>
+      <div className="container">
+        <LatestNews/>
       </div>
 
 
