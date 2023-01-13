@@ -140,5 +140,20 @@
 }
 .twocard img {
 width:318px;
-
+}
+.signing a {
+  text-decoration: none;
+  color:white;
+}
+.signing {
+  position: relative;
+}
+.wish {
+  width:200px;
+  height: 200px;
+  position: absolute;
+  top:50px;
+  
+  z-index: 99;
+  background-color: red;
 }

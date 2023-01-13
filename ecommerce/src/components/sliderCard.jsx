@@ -6,9 +6,11 @@ import React from "react";
 import { render } from "react-dom";
 
 
-function Cards() {
+function Cards(props) {
+
+
     const ratingChanged = (newRating) => {
-        console.log(newRating);
+        // console.log(newRating);
     };
     const ListItems = CardData2.map(list => {
         const children = list.children.map(el => {
@@ -16,6 +18,10 @@ function Cards() {
                 <div className=" card w-25 p-2">
 
                     <img src={el.img} className="w-100 p-2 h-75"></img>
+                    <img src={el.icon} className="w-25 p-2" onClick={() =>{
+                        props.setWishList(props.wishList + 1)
+                        console.log(props.wishList);
+                    }}></img>
                     <div className="card-body">
                         <h7>{el.name}</h7>
                         <p>{el.price}</p>

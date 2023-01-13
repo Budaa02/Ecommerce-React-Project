@@ -4,8 +4,19 @@ import { BsPerson } from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import { Nav, NavLink, NavDropdown } from "react-bootstrap";
+import { useState } from 'react';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
-function search() {
+function Search(props) {
+    // const [wish, setWish] = useState(false)
+    // function wishlistFunc() {
+    //     setWish(!wish)
+    //     console.log(wishlistFunc);
+
+    // }
+
+
+
     return (
         <div className='search_main d-flex'>
             <div className='d-flex container search_container justify-content-around'>
@@ -25,10 +36,12 @@ function search() {
                     </Form>
                 </div>
                 <div className='d-flex align-items-center signing'>
-                   <p className=''> <BsPerson />Sign in</p>
-                  <p className=''>  <AiOutlineHeart/>0</p>
-                    <p className=''><AiOutlineShoppingCart />0</p>
+                   <p className='p-2'> <BsPerson />Sign in</p>
+                  <a className='p-2'  >  <AiOutlineHeart />{props.wishList}</a>
+                    <p className=''><AiOutlineShoppingCart />0</p> 
+                       {/* {wish ? <div className='wish'>{props.wishlist}</div> : ""} */}
                 </div>
+                
 
             </div>
 
@@ -36,7 +49,7 @@ function search() {
     )
 }
 
-export default search
+export default Search
 
 
 

@@ -9,7 +9,7 @@ import carouselData from "./data/slider";
 import AliceCarousel from "react-alice-carousel";
 import Popular from "./components/Popular";
 import CardSlider from "./data/card";
-import { Children } from "react";
+import { Children, useState } from "react";
 import Cards from "./components/sliderCard";
 import Background from "./components/background";
 import ThreeCards from "./components/ThreeList"
@@ -18,8 +18,8 @@ import UserCardData1 from "./components/userCard"
 import LogoPng from "./components/footerLogo";
 import LatestNews from "./components/latestNews";
 function App() {
+  const [wishList, setWishList] = useState(0)
   const crouselData1 = carouselData.map((data) => {
-    console.log(data);
     return (
       <div className="caroContainer flex-md-row flex-column-reverse py-5 container">
         <div>
@@ -36,7 +36,6 @@ function App() {
     );
   });
   const sliders = slider.map((product) => {
-    console.log(product)
     return (
       <div className="container d-flex justify-content-around caroCard">
         <div className="cardSlider card align-items-center justify-content-between w-80 p-4 m-0">
@@ -76,7 +75,7 @@ function App() {
 
       <OurStore />
       <div className="menu ">
-        <Search />
+        <Search wishList={wishList}/>
       </div>
       <div>
         <MainMenu />
@@ -112,7 +111,9 @@ function App() {
         <Popular />
       </div>
       <div className="">
-        <Cards></Cards>
+        <Cards wishList={wishList} setWishList={setWishList}/>
+
+        
       </div>
       <div>
         <Background />
