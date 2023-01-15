@@ -17,6 +17,8 @@ import FreeDelivery from "./components/delivery"
 import UserCardData1 from "./components/userCard"
 import LogoPng from "./components/footerLogo";
 import LatestNews from "./components/latestNews";
+import FooterEmail from "./components/footerEmail"
+import FooterLi from "./components/footer"
 function App() {
   const [wishList, setWishList] = useState(0)
   const crouselData1 = carouselData.map((data) => {
@@ -132,6 +134,10 @@ function App() {
       </div>
       <div className="container">
         <LatestNews/>
+      </div>
+      <div className="container  ">
+          <FooterEmail/>
+          <FooterLi/>
       </div>
 
 
