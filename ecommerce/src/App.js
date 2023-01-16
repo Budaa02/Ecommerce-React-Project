@@ -8,7 +8,7 @@ import slider from "./data/slidercard"
 import carouselData from "./data/slider";
 import AliceCarousel from "react-alice-carousel";
 import Popular from "./components/Popular";
-import CardSlider from "./data/card";
+
 import { Children, useState } from "react";
 import Cards from "./components/sliderCard";
 import Background from "./components/background";
@@ -19,43 +19,14 @@ import LogoPng from "./components/footerLogo";
 import LatestNews from "./components/latestNews";
 import FooterEmail from "./components/footerEmail"
 import FooterLi from "./components/footer"
+import SignIn from "./components/Sign/SignIn";
+import Main from "./components/Main";
+import { Route, Routes } from "react-router-dom";
+import Test from "./components/Test";
+
 function App() {
   const [wishList, setWishList] = useState(0)
-  const crouselData1 = carouselData.map((data) => {
-    return (
-      <div className="caroContainer flex-md-row flex-column-reverse py-5 container">
-        <div>
-          <h2>{data.name}</h2>
-          <button className="btn btn-warning rounded-4 px-4 py-3 text-white">
-            Shop Now
-          </button>
-          <button className="btn btn-outline-secondary rounded-4  px-4 py-3 ms-3">
-            Shop Now
-          </button>
-        </div>
-        <img src={data.url} className="sliderimg" />
-      </div>
-    );
-  });
-  const sliders = slider.map((product) => {
-    return (
-      <div className="container d-flex justify-content-around caroCard">
-        <div className="cardSlider card align-items-center justify-content-between w-80 p-4 m-0">
 
-          <div className="d-flex">
-            <img src={product.url} className={product.style} id="sliders2-img" />
-            <p>{product.price}</p>
-          </div>
-          <div className="">
-            <p>{product.name}</p>
-            <p>{product.item}</p>
-          </div>
-
-        </div>
-
-      </div>
-    )
-  })
   // const CardList = CardSlider.map((el) => {
 
   // })
@@ -77,67 +48,23 @@ function App() {
 
       <OurStore />
       <div className="menu ">
-        <Search wishList={wishList}/>
+        <Search wishList={wishList} />
+
       </div>
+      
       <div>
         <MainMenu />
       </div>
-      <div className="container-banner">
-        <AliceCarousel
-          autoPlay
-          infinite
-          autoPlayInterval="3000"
-          disableButtonsControls="true"
-          mouseTracking
-        >
-          {crouselData1}
-        </AliceCarousel>
-      </div>
-      <div className="container">
-        <AliceCarousel className="container "
-          responsive={{
-            0: {
-              items: 3
-            }
-          }}
-          autoPlay
-          infinite
-          autoPlayInterval="3000"
-          disableButtonsControls="true"
-          mouseTracking
-        >
-          {sliders}
-        </AliceCarousel>
-      </div>
-      <div className="container">
-        <Popular />
-      </div>
-      <div className="">
-        <Cards wishList={wishList} setWishList={setWishList}/>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/login" element={<SignIn/>}/>
+        <Route path="/test" element={<Test/>}/>
+      </Routes>
+      {/* <Main /> */}
 
-        
-      </div>
-      <div>
-        <Background />
-      </div>
-      <div className="container">
-        <ThreeCards/>
-      </div>
-      <div className="container bg-secondary">
-        <FreeDelivery/>
-      </div>
-      <div className="container">
-      <UserCardData1/>
-      </div>
-      <div className="container bg-secondary">
-          <LogoPng/>
-      </div>
-      <div className="container">
-        <LatestNews/>
-      </div>
       <div className="container  ">
-          <FooterEmail/>
-          <FooterLi/>
+        <FooterEmail />
+        <FooterLi />
       </div>
 
 
