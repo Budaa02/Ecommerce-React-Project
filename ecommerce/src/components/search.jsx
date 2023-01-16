@@ -24,7 +24,12 @@ function Search(props) {
         <div className='search_main d-flex'>
             <div className='d-flex container search_container justify-content-around'>
                 <div className='d-flex '>
-                    <img src="images/logo-1.svg" />
+                 <Link to={"/"}>
+                 <img src="images/logo-1.svg" />
+                 </Link>
+                    
+                 
+                    
 
                 </div>
                 <div>
@@ -39,7 +44,7 @@ function Search(props) {
                     </Form>
                 </div>
                 <div className='d-flex align-items-center signing'>
-                    <p className='p-2'> <BsPerson /><Link to={"/test"}>Sign in</Link></p>
+                    <p className='p-2'> <BsPerson /><Link to={"/signin"}>Sign in</Link></p>
                     <a className='p-2'  >  <AiOutlineHeart />{props.wishList}</a>
                     <p className=''><AiOutlineShoppingCart />0</p>
                     {/* {wish ? <div className='wish'>{props.wishlist}</div> : ""} */}
