@@ -3,11 +3,12 @@ import CardData2 from "../data/card"
 import AliceCarousel from "react-alice-carousel"
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { render } from "react-dom";
+import {useState} from "react"
+
 
 
 function Cards(props) {
-
+    const [wishList, setWishList] = useState(0)
 
     const ratingChanged = (newRating) => {
         // console.log(newRating);
@@ -18,9 +19,9 @@ function Cards(props) {
                 <div className=" card w-25 p-2">
 
                     <img src={el.img} className="w-100 p-2 h-75"></img>
-                    <img src={el.icon} className="w-25 p-2" onClick={() =>{
-                        props.setWishList(props.wishList + 1)
-                        console.log(props.wishList);
+                    <img src={el.icon} className="w-25 p-2" onClick={(props) =>{
+                        setWishList(wishList + 1)
+                        console.log(wishList);
                     }}></img>
                     <div className="card-body">
                         <h7>{el.name}</h7>

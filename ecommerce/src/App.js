@@ -48,7 +48,7 @@ function App() {
 
       <OurStore />
       <div className="menu ">
-        <Search wishList={wishList} />
+        <Search wishList={wishList} setWishList={setWishList} />
 
       </div>
       

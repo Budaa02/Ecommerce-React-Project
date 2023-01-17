@@ -7,13 +7,14 @@ import UserCardData1 from "./userCard"
 import LatestNews from "./latestNews";
 import AliceCarousel from "react-alice-carousel";
 import Popular from "./Popular";
-
+import { useState } from "react";
 import LogoPng from "./footerLogo";
 import slider from "../data/slidercard"
 import carouselData from "../data/slider";
 
 
-export default function Main ({wishList, setWishList}) {
+export default function Main (props) {
+  const [wishList, setWishList] = useState(0)
     const crouselData1 = carouselData.map((data) => {
         return (
           <div className="caroContainer flex-md-row flex-column-reverse py-5 container">
