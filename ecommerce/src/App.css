@@ -153,9 +153,9 @@ width:318px;
   height: 200px;
   position: absolute;
   top:50px;
-  
   z-index: 99;
-  background-color: red;
+  background-color: white;
+  color:red;
 }
 .form-group {
   text-align: start;
@@ -172,3 +172,6 @@ width:318px;
   text-decoration: none;
   color:#563d7c;
 }
+/* .star:active {
+background-color: red;
+} */

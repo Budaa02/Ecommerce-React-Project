@@ -10,7 +10,7 @@ import AliceCarousel from "react-alice-carousel";
 import Popular from "./components/Popular";
 
 import { Children, useState } from "react";
-import Cards from "./components/sliderCard";
+import Cards from "./components/SliderCard";
 import Background from "./components/background";
 import ThreeCards from "./components/ThreeList"
 import FreeDelivery from "./components/delivery"
@@ -56,7 +56,7 @@ function App() {
         <MainMenu />
       </div>
       <Routes>
-        <Route path="/" element={<Main/>}/>
+        <Route path="/" element={<Main wishList={wishList} setWishList={setWishList}/>}/>
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/test" element={<Test/>}/>
       </Routes>
