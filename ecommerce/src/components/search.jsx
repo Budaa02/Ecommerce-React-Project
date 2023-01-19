@@ -39,21 +39,36 @@ function Search(props) {
             <BsPerson />
             <Link to={"/signin"}>Sign in</Link>
           </p>
-          <a className="p-2">
-            {" "}
-            <AiOutlineHeart onClick={wishlistFunc} />
-            {props.wishList}
+
+          {/* wishlist */}
+          <AiOutlineHeart />
+          {props.wishList.length}
+          <a className="item active">
+            <div class="ui simple dropdown item">
+              <div class="menu">
+                {props.wishList.map((w, index) => {
+                  return (
+                    <div>
+                      <div className="item">
+                        choice {w.name}
+                        <button>X</button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </a>
           <p className="">
             <AiOutlineShoppingCart />0
           </p>
-          {wish ? (
+          {/* {wish ? (
             <div className="wish">
               <p>{props.wishList}close</p>
             </div>
           ) : (
             ""
-          )}
+          )} */}
         </div>
       </div>
     </div>

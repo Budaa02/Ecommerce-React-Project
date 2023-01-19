@@ -9,8 +9,8 @@ function Cards(props) {
       return (
         <Card
           el={el}
-          wishList={props.wishList}
-          setWishList={props.setWishList}
+          wishlist={props.wishList}
+          setWishlist={props.setWishList}
         />
       );
     });

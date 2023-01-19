@@ -25,7 +25,7 @@ import { Route, Routes } from "react-router-dom";
 import Test from "./components/Test";
 
 function App() {
-  const [wishList, setWishList] = useState(0)
+  const [wishList, setWishList] = useState([]);
 
   // const CardList = CardSlider.map((el) => {
 
